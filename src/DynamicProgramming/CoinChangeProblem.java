@@ -1,7 +1,7 @@
 package DynamicProgramming;
 
 /*
- * Coing change proble using dynamic programming 
+ * Coin change problem using dynamic programming 
  */
 
 import java.util.ArrayList;
@@ -10,8 +10,8 @@ import java.util.List;
 public class CoinChangeProblem {
     
     public static void main(String ...a){
-        int coins[] = {1,2,5};
-        int change = 24;
+        int coins[] = {1,5,10,25};
+        int change = 81;
         List<Integer> result;
         result = makeChange(coins, change);
         if(result != null){
@@ -27,13 +27,15 @@ public class CoinChangeProblem {
         
         int length = coins.length;
         List<Integer> changeCoins = new ArrayList<Integer>();
-        for(int i=0;i<length;i++){
+        int i = 0;
+        while(i<length){
             int d = minDifference(coins, change);
+            i++;
             if(d > 0){
-                i = 0;
+            	changeCoins.add(d);                
                 change = change - d;
-                changeCoins.add(d);
-            }
+                i = 0;
+            }            
         }
         return changeCoins;
     }
@@ -44,11 +46,13 @@ public class CoinChangeProblem {
         for(int i=0;i<length;i++){
             int diff = money - coins[i];
             if(diff > -1){
-                if(diff < difference){                    
+                if(diff <= difference){                    
                     coin = coins[i];
+                    difference = diff;
                 }
-            }            
-        }        
+            }
+           
+        }             
         return coin;        
     }    
 }

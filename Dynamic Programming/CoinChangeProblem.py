@@ -3,7 +3,7 @@
 
 coins = [25,10,5,1]
 coins.sort()
-money = 78
+money = 121
 
 def count(money , coins ):
     if money == 0 or len(coins) == 0:
@@ -21,8 +21,6 @@ def count(money , coins ):
         
     print change
         
-
-
 def coinWithMinDifference(money,coins):
     final = 0
     diff = money

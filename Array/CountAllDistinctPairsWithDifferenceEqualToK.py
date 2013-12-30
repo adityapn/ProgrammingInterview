@@ -1,4 +1,6 @@
 
+# Source : http://www.geeksforgeeks.org/count-pairs-difference-equal-k/
+
 def binary_search(li , start , end , item):    
     if start > end:
         return None

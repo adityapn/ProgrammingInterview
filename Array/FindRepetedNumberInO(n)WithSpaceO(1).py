@@ -1,5 +1,7 @@
 import math
 
+# Source : http://www.geeksforgeeks.org/find-the-maximum-repeating-number-in-ok-time/
+
 def findRepeated(numbers):
     i = 0
     length = len(numbers)

@@ -16,4 +16,4 @@ def lps(string):
     
     return matrix[0][length-1]
 
-print lps("Programming")
+print lps("banna")

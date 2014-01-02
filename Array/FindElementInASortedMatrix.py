@@ -2,8 +2,8 @@
 # Question source (Amazon Interview)
 # http://www.geeksforgeeks.org/amazon-interview-set-55-on-campus/
 # Given a matrix(not necessarily square) in which the elements in a row,
-# as well in a column are sorted. Find a given integer in the matrix.
-
+# as well in a column are sor
+# Complexity m log n 
 matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
 
 def binary_search(li , start , end , item):    

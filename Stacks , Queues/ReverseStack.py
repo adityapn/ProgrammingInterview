@@ -2,7 +2,6 @@
 def reverse(s):
 	if s is None:
 		return
-
 	data = 0 
 	try:
 		data = s.pop()

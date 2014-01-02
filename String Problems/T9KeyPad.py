@@ -1,5 +1,4 @@
 
-
 def permutate(string1,string2):
     temp = []
     for one in string1:
@@ -8,7 +7,6 @@ def permutate(string1,string2):
             temp.append(concat)
 
     return temp
-
 
 def numbers(numbers_entered):
     length = len(numbers_entered)
@@ -23,13 +21,11 @@ def numbers(numbers_entered):
         while i < length:            
             one = hashtable[str(numbers_entered[i])]
             combinations = permutate(combinations,one)
-            i += 1
-            
+            i += 1            
         return combinations
     elif length == 2:
         return permutate(hashtable[str(numbers_entered[0])],hashtable[str(numbers_entered[1])])
     else:
         return hashtable[str(numbers_entered[0])]
     
-
 print numbers([1,3,4])

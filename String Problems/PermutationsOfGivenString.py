@@ -10,10 +10,7 @@ def swap(char1,char2):
 def permutations(start,end):
     global string
     if start == end:
-        temp = ""
-        for s in string:
-            temp += s
-        print temp
+        print string
     else:
         for j in range(start,end):
             swap(start,j)

@@ -10,14 +10,20 @@ def dp_lcs(str1,str2,len1,len2):
         return len1
     
     matrix = [[0 for i in range(0,len2+1)] for j in range(0,len1+1)]
-    number = 0
+    
     for i in range(1,len1+1):
         for j in range(1,len2+1):
-            if str1[i-1] == str2[j-1]:
-                number += 1
+            if str1[i-1] == str2[j-1]:                
                 matrix[i][j] = matrix[i-1][j-1] + 1
             else:
                 matrix[i][j] = max(matrix[i-1][j],matrix[i][j-1])
+
+    for array in matrix:
+        temp = ""
+        for element in array:
+            temp += " "+str(element)
+        print temp
+    
             
     return matrix[len1][len2]
 

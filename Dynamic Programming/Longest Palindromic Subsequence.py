@@ -13,7 +13,13 @@ def lps(string):
                 matrix[i][j] = matrix[i+1][j-1] + 2
             else:
                 matrix[i][j] = max(matrix[i][j-1],matrix[i+1][j])
-    
+
+    for array in matrix:
+        temp = ""
+        for element in array:
+            temp += " "+str(element)
+        print temp
+            
     return matrix[0][length-1]
 
-print lps("banna")
+print lps("GEEG")

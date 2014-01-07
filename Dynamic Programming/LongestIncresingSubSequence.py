@@ -9,20 +9,35 @@ def longSubSeq(li):
     if len(li) < 1:
         return None
     counter = 1
-    items = []
-    items.append(li[0])
+    main_list = []
+    # temporary list holds only temporary series
+    temp = []
+    temp.append(li[0])
     i = 0
     j = 1
+    # When the list is empty add the temp data do not look for length
+    first = True
+    
     max_length = len(li)
     while j< max_length:
         if li[i] < li[j]:
             counter = counter + 1
-            items.append(li[j])
+            temp.append(li[j])
             i = j
             j = j + 1
         else:
+            # When the new sequence is greater than old one , replace it
+            if len(temp) > len(main_list):                
+                main_list = temp            
+            temp = []
+            i += 1            
             j = j+1
-    print items
+    # When the last m number are incresing then check it after the loop ,
+    # Because loop escapes it 
+    if len(temp) > len(main_list):
+        main_list = temp            
+    
+    print main_list
 
-li = [10, 22, 9, 33, 21, 50, 41, 60, 80]
+li = [10,1,2,3,4,5]
 longSubSeq(li)

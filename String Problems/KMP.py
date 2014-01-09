@@ -17,7 +17,7 @@ def KMP(string,match):
                 return
             i += 1
             j += 1
-        elif j>0:
+        elif j>0:            
             j = j-1 # We can use failure function 
         else:
             i += 1

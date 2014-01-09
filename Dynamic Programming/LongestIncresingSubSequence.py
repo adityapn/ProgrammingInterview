@@ -39,5 +39,5 @@ def longSubSeq(li):
     
     print main_list
 
-li = [10,1,2,3,4,5]
+li = [213,32,12,43,10,11,12,13,15,16,1,2,3,4,5,6]
 longSubSeq(li)

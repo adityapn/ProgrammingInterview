@@ -24,7 +24,7 @@ def printCombinations(array,length,string):
     if sum != 0:
         return combinations
 
-string = "aditya"
+string = "adity"
 length = len(string)
 array = [0 for i in range(0,length+1)]
 combinations(array,string,0,length)

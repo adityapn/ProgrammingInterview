@@ -66,8 +66,6 @@ class BinaryTree:
                         else:
                             # do recursively with right sub tree
                             result = isbst(node.right)
-                            # Mark the current node as visited
-                            # node.visited = True
                     else:
                         # There is loop , so say it false
                         return False

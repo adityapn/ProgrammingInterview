@@ -8,9 +8,9 @@ def lps(string):
         for i in range(0,length-cl+1):            
             j = i + cl - 1
             if string[i] == string[j] and cl == 2:
-                matrix[i][j] = 2
+                matrix[i][j] = 1
             elif string[i] == string[j]:
-                matrix[i][j] = matrix[i+1][j-1] + 2
+                matrix[i][j] = matrix[i+1][j-1] + 1
             else:
                 matrix[i][j] = max(matrix[i][j-1],matrix[i+1][j])
 
@@ -22,4 +22,4 @@ def lps(string):
             
     return matrix[0][length-1]
 
-print lps("GEEG")
+print lps("KANABBCBBAKO")

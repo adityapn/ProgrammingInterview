@@ -1,9 +1,9 @@
 # Find the differnce between money and coins use the ones which give min
 # Chanage 
 
-coins = [25,10,5,1]
+coins = [25,10,5,2,1]
 coins.sort()
-money = 121
+money = 99
 
 def count(money , coins ):
     if money == 0 or len(coins) == 0:

@@ -4,8 +4,7 @@
 
 def find_path(matrix,final_point1,final_point2):
 
-    if final_point1 < 0 or final_point2 < 0:
-        print "points ("+str(final_point1)+","+str(final_point2)+")"
+    if final_point1 < 0 or final_point2 < 0:        
         return 1
     elif final_point1 == 0 and final_point2 == 0:
         return matrix[final_point1][final_point2]
